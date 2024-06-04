@@ -1,3 +1,15 @@
-[gd_scene format=3 uid="uid://bywhhagswx4gg"]
+[gd_scene load_steps=2 format=3 uid="uid://bywhhagswx4gg"]
+
+[ext_resource type="Script" path="res://GUI/CharacterView.gd" id="1_3tjcd"]
 
 [node name="CharacterView" type="Node2D"]
+script = ExtResource("1_3tjcd")
+
+[node name="CharaSelecter" type="TabContainer" parent="."]
+offset_left = 1188.0
+offset_top = 47.0
+offset_right = 1865.0
+offset_bottom = 1002.0
+
+[node name="全世界" type="VBoxContainer" parent="CharaSelecter"]
+layout_mode = 2

@@ -1,0 +1,32 @@
+{
+"CharacterList":{
+"エルフリード": {
+"experience": 0,
+"hp": 150,
+"level": 1,
+"mp": 100,
+"name": "エルフリード",
+"true_name": "アルヴァリオン",
+"skills": {}
+},
+"ユリウス": {
+"experience": 0,
+"hp": 200,
+"level": 1,
+"mp": 150,
+"name": "ユリウス",
+"true_name": "ヴァルキリオ",
+"skills": {}
+},
+"リリア": {
+"experience": 0,
+"hp": 100,
+"level": 1,
+"mp": 200,
+"name": "リリア",
+"true_name": "セレスティア",
+"skills": {}
+}
+}
+}
+
