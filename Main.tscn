@@ -1,3 +1,16 @@
-[gd_scene format=3 uid="uid://bku1q8b7uh5ve"]
+[gd_scene load_steps=2 format=3 uid="uid://bku1q8b7uh5ve"]
+
+[ext_resource type="PackedScene" uid="uid://bywhhagswx4gg" path="res://GUI/CharacterView.tscn" id="1_wfylg"]
 
 [node name="Main" type="Node"]
+
+[node name="CharacterView" parent="." instance=ExtResource("1_wfylg")]
+
+[node name="Button" type="Button" parent="."]
+offset_left = 331.0
+offset_top = 387.0
+offset_right = 499.0
+offset_bottom = 463.0
+text = "execute"
+
+[connection signal="pressed" from="Button" to="CharacterView" method="_day_execute"]

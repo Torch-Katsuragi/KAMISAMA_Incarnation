@@ -1,15 +1,58 @@
-[gd_scene load_steps=2 format=3 uid="uid://bywhhagswx4gg"]
+[gd_scene load_steps=3 format=3 uid="uid://bywhhagswx4gg"]
 
-[ext_resource type="Script" path="res://GUI/CharacterView.gd" id="1_3tjcd"]
+[ext_resource type="Script" path="res://GUI/CharacterView.gd" id="1_46t70"]
+[ext_resource type="PackedScene" uid="uid://cq3fimhx8x3f1" path="res://Character/Character.tscn" id="2_lx47y"]
 
 [node name="CharacterView" type="Node2D"]
-script = ExtResource("1_3tjcd")
+script = ExtResource("1_46t70")
 
 [node name="CharaSelecter" type="TabContainer" parent="."]
-offset_left = 1188.0
-offset_top = 47.0
-offset_right = 1865.0
-offset_bottom = 1002.0
+offset_left = 1637.0
+offset_top = 26.0
+offset_right = 1901.0
+offset_bottom = 1062.0
 
 [node name="全世界" type="VBoxContainer" parent="CharaSelecter"]
 layout_mode = 2
+
+[node name="CharaDetail" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Status" type="HBoxContainer" parent="CharaDetail"]
+layout_mode = 0
+offset_left = 791.0
+offset_top = 52.0
+offset_right = 842.0
+offset_bottom = 129.0
+
+[node name="StatusName" type="VBoxContainer" parent="CharaDetail/Status"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CharaDetail/Status/StatusName"]
+layout_mode = 2
+text = "NAME"
+
+[node name="Label2" type="Label" parent="CharaDetail/Status/StatusName"]
+layout_mode = 2
+text = "HP
+"
+
+[node name="Label3" type="Label" parent="CharaDetail/Status/StatusName"]
+layout_mode = 2
+text = "MP"
+
+[node name="StatusValue" type="VBoxContainer" parent="CharaDetail/Status"]
+layout_mode = 2
+
+[node name="Portrait" type="Control" parent="CharaDetail"]
+anchors_preset = 0
+offset_left = 1177.0
+offset_top = 543.0
+offset_right = 1217.0
+offset_bottom = 583.0
+scale = Vector2(0.5, 0.5)
+
+[node name="Character" parent="CharaDetail/Portrait" instance=ExtResource("2_lx47y")]
