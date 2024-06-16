@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://do60sltpi25f4"]
+
+[ext_resource type="Script" path="res://Scenes/Map/Location.gd" id="1_mf4ct"]
+[ext_resource type="Texture2D" uid="uid://b3uht15y2ntdo" path="res://icon.svg" id="2_ndc6t"]
+
+[node name="Location" type="Node2D"]
+scale = Vector2(0.5, 0.5)
+script = ExtResource("1_mf4ct")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_ndc6t")

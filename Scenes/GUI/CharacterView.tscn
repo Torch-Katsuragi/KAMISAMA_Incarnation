@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://bywhhagswx4gg"]
 
-[ext_resource type="Script" path="res://GUI/CharacterView.gd" id="1_46t70"]
-[ext_resource type="PackedScene" uid="uid://cq3fimhx8x3f1" path="res://Character/Character.tscn" id="2_lx47y"]
+[ext_resource type="Script" path="res://Scenes/GUI/CharacterView.gd" id="1_46t70"]
+[ext_resource type="PackedScene" uid="uid://cq3fimhx8x3f1" path="res://Scenes/Character/Character.tscn" id="2_5txll"]
 
 [node name="CharacterView" type="Node2D"]
 script = ExtResource("1_46t70")
@@ -55,4 +55,4 @@ offset_right = 1217.0
 offset_bottom = 583.0
 scale = Vector2(0.5, 0.5)
 
-[node name="Character" parent="CharaDetail/Portrait" instance=ExtResource("2_lx47y")]
+[node name="Character" parent="CharaDetail/Portrait" instance=ExtResource("2_5txll")]

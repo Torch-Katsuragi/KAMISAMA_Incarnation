@@ -9,7 +9,7 @@ class WorkerHolic extends Interface:
 		super._init(chara)
 
 	func execute():
-		if character.status["HP"]>character.status["ABILITY"]["HP"]*0.5:
+		if character.hp>character.ability.hp*0.5:
 			World.add_event(Event.DungeonCrowl.new(self.character))
 		else:
 			World.add_event(Event.Rest.new(self.character))

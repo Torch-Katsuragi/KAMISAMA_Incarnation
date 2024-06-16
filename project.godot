@@ -17,7 +17,6 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-Calender="*res://Scripts/Calender.gd"
 World="*res://Scripts/World.gd"
 Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 
@@ -56,6 +55,7 @@ text/autopauses={}
 window/size/viewport_width=1920
 window/size/viewport_height=1080
 window/stretch/mode="viewport"
+window/stretch/scale=0.5
 
 [editor_plugins]
 

@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://cq3fimhx8x3f1"]
+
+[ext_resource type="Script" path="res://Scenes/Character/Character.gd" id="1_j0en1"]
+[ext_resource type="Texture2D" uid="uid://8wrj67j58wfi" path="res://Assets/Images/Portraits/猫耳メイドさんピンク.png" id="2_qixmc"]
+
+[node name="Character" type="Node2D"]
+position = Vector2(3, 0)
+script = ExtResource("1_j0en1")
+
+[node name="Portrait" type="Sprite2D" parent="."]
+position = Vector2(368, 578)
+texture = ExtResource("2_qixmc")

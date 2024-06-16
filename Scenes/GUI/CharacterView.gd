@@ -27,7 +27,7 @@ func _ready():
 	for character_name in World.character_dict.keys():
 		var button = Button.new()
 		var chara=World.character_dict[character_name]
-		button.text =chara.status["NAME"]
+		button.text =chara.nickname
 		vbox.add_child(button)
 		button.connect("pressed", _on_button_pressed.bind(button,chara))
 	
@@ -36,7 +36,10 @@ func _ready():
 # ボタンが押されたときに呼び出されるシグナルのハンドラ
 func _on_button_pressed(_btn,chara) -> void:
 	# 選択されたキャラクターの真名をデバッグログに出力
-	World.debuglog("真名：%sを選択"%chara.status["TRUE_NAME"])
+	World.debuglog("真名：%sを選択"%chara.true_name)
+	# キャラクターの所属するグループ一覧を取得して表示
+	var groups = chara.get_groups()
+	World.debuglog("グループ一覧: %s" % str(groups))
 	# 選択されたキャラクターの詳細を更新
 	_update_detail(chara)
 
@@ -53,13 +56,15 @@ func _update_detail(chara):
 	# portrait_nodeだけはcharacterをそのまま表示しているのでメモリフリーせずに初期化
 	for child in portrait_node.get_children():
 		portrait_node.remove_child(child)
+
+	var status=chara.get_dict()
 	
 	# キャラクターのステータスをラベルとして表示
-	for key in chara.status.keys():
+	for key in status.keys():
 		var status_name = Label.new()
 		var status_value = Label.new()
 		status_name.text = key
-		status_value.text = str(chara.status[key])
+		status_value.text = str(status[key])
 		status_name_node.add_child(status_name)
 		status_value_node.add_child(status_value)
 	
@@ -71,5 +76,3 @@ func _update_detail(chara):
 func _process(delta):
 	pass
 
-func _day_execute():
-	World.execute()
